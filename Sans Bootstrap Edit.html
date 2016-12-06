@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>PRXC</title>
+
+		<style type="text/css">
+			
+			body {
+				background-image: url("http://media.rhizome.org/blog/9583/Contra-Internet-Top.gif");
+			}
+			
+			.paper {
+				height: 750px;
+				width: 60%;
+				background-color: #ffffff;
+				margin: 25px auto;
+				-webkit-box-shadow: 0 0 10px #444444;
+				-moz-box-shadow: 0 0 10px #444444;
+			}
+			
+			.header {
+				font-family: "Copperplate Gothic Light";
+				text-align: center;
+				padding-top: 75px;
+				padding-bottom: 50px;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<div>
+			<div class="paper">
+				<div class="header">
+<h2>
+<u>Welcome to PRXChuck, Click the button to start the process</u>
+</h2>
+<br>
+<style type="text/css">
+* {margin:5;padding:10;}
+</style>
+<button onclick="myFunction()">Start Browsing</button>
+<p id="demo"></p>
+<br>
+<b>Version 1.2.2</b>
+<i>Made by Chuck</i>
+<br>
+<br>
+<h6><i>We are Still in the basic stages of deveolopment right now, do not try to open webpages with the https:// extention at the front, and some redirect links may be missed</i></h6>
+<br>
+<button onclick="myUnction()">See Base Script for this</button>
+<script>
+    function myUnction(){
+        var password = prompt("Enter Password")
+        if(password === "drowssap"){
+        window.open("https://drive.google.com/open?id=0Bxq6mhn1Ff4ZUEpuNE5iN1lFaDQ")
+    }else{
+        alert("Incorrect Password")
+    }
+    }
+</script>
+<b>Password Locked</b><br><br><br><br><br><br>
+<button onclick="myB64()">VGhlIFBhc3N3b3JkIGlzIGRyb3dzc2Fw</button>
+<script>
+function myB64(){
+alert("What does it mean?")
+}
+</script>
+<script>
+document.body.style.backgroundColor = "lightblue";
+function myFunction() {
+    //Stage 1 start
+var loc = prompt("Enter Sitename For Redirection")
+var lclen = loc.length
+if(loc.substring(lclen - 1,lclen) != "/"){
+var loc = loc + "/"
+var lclen = lclen + 1
+}
+if(loc.substring(0,7) === "http://"){
+var locst1 = loc.substring(7,lclen)
+var httpcount = "http://"
+}else{
+if(loc.substring(0,8) === "https://"){
+    alert("Support us to get https:// working again")
+    window.open("http://drive-html-viewer.pansy.at/?state=%7B%22ids%22:%5B%220Bxq6mhn1Ff4ZUEpuNE5iN1lFaDQ%22%5D,%22action%22:%22open%22,%22userId%22:%22105060372905301199679%22%7D")
+var locst1 = loc.substring(8,lclen)
+var doubleslash = "//"
+var httpcount = ("http:" + doubleslash + "s-s.")
+}else{
+var valaid = "http://"
+var locst1 = loc
+var httpcount = (valaid)
+}
+}
+//Stage 1 End
+//Stage 2 Start
+var lclenst2 = locst1.length
+var run = 0
+while(lclenst2 > run){
+if(locst1.substring(run,run + 1) === "/"){
+var comend = run
+break
+}
+var run = run + 1
+}
+var locst2 = locst1.substring(0,comend)
+var end = locst1.substring(comend,lclenst2)
+//Stage 2 End
+//Stage 3 starts
+var locst3 = (locst2 + ".prx.us.teleport.to")
+var endurl = locst3 + end
+var httpend = httpcount + endurl
+//Stage 3 Ends
+//Stage 4 Starts
+window.location = (httpend)
+//Stage 4 Ends
+}
+</script>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+
+</html>
