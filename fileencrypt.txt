@@ -1,25 +1,48 @@
 <body style="margin : 0;">
-<textarea style="width: 100%; height: 50%;" id="txtat"></textarea>
-<button class="colour"onclick="sTart()">Click Me to Start</button>
+<textarea style="width: 100%; height: 50%;" id="txtat">
+</textarea>
+<form style="position:absolute; left: 50%; transform:translateX(-50%);">
+<p>Encrypt or decrypt:
+  <select id="mySelect">
+    <option value="0">Choose One</option>
+    <option value="1">Encrypt</option>
+    <option value="2">Decrypt</option>
+  </select>
+</form>
+
+<button style="position:absolute; top: 50%; left: 50%; transform:translate(-50%,300%)" onclick="startProcess()">Go</button>
 <p id="demo"></p>
 <script>
-var lines = (document.getElementById('txtat').innerHTML).split('\n');
-for(var i = 0;i < lines.length;i++){
-    //code here using lines[i] which will give you each line
+function startProcess() {
+var textArea = document.getElementById("txtat");
+var arrayOfLines = textArea.value.split("\n");
+var lines = arrayOfLines.length;
+var fullthing = arrayOfLines[0] + " /n " 
+var linrun = 1;
+while(linrun < lines){
+var fullthing = fullthing + arrayOfLines[linrun] + " /n "
+linrun++
 }
-function sTart() {
-var kalle = confirm("Encode or decode? Hit OK to encode")
-var lel = " "
+console.log(fullthing); 
+var e = document.getElementById("mySelect");
+var strUser = e.options[e.selectedIndex].value;
+var stin = parseInt(strUser);
+if(stin == 1){
+var kalle = true;
+}else if(stin == 2){
+var kalle = false;
+}
+var lel = " ";
+var ch = fullthing;
 if(kalle === true){
 var runthroughs = 0
 var run = 0
 var wordlength = 1
-var ch = prompt("Insert your Text to be encoded")
 var wordlength = ch.length
 while(runthroughs < wordlength){
 var part = ch.substring(runthroughs,runthroughs + 1)
-if(part === "a"){
-var letterz = ("sT")
+if(part === "a"){ 
+var letterz = ("sT"); 
 }
 if(part === "b"){
 var letterz = ("p2")
@@ -303,7 +326,7 @@ var runthroughs = (runthroughs + 1)
 }else{
 var runthroughs = 0
 var wordlength = 1
-var characters = prompt("Insert Encoding to decode")
+var characters = ch;
 var wordlength = characters.length
 while(runthroughs < wordlength){
 var part = characters.substring(runthroughs,runthroughs + 2)
@@ -314,7 +337,7 @@ if(part === "p2"){
 var letterz = ("b")
 }
 if(part === "9v"){
-var letterz = ("c")
+var letterz = ("c") 
 }
 if(part === "ab"){
 var letterz = ("d")
@@ -587,11 +610,23 @@ var letterz = ("0")
 }
 //Here it is
 var runthroughs = (runthroughs + 2)
-var sent = sent + letterz
+var sent = sent + letterz;
 }
 }
 var encryptline = sent.substring(9,sent.length);
-
+var enclen = encryptline.length;
+var encrun = 0;
+var filled = "";
+while(enclen > encrun){
+if(encryptline.substring(encrun,encrun+2) === "/n"){
+var filled = filled + "\n";
+var encrun = encrun+2;
+}else{
+var filled = filled + encryptline.substring(encrun,encrun+1);
+var encrun = encrun+1;
+}
+}
+document.write(filled);
 }
 </script>
 </body>
